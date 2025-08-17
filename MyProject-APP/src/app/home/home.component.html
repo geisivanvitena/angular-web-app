@@ -1,0 +1,107 @@
+<div class="jumbotron text-center shadow-lg" id="home">
+  <h1 class="display-4 angular-title">
+    <i class="fab fa-angular angular-icon"></i> Bem-vindo ao Meu Projeto Angular
+  </h1>
+  <p class="lead">
+    Um projeto moderno e responsivo, criado com <strong>Angular</strong> para entregar máxima performance e um design elegante.
+  </p>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4 mb-4 reveal" *ngFor="let item of destaques; let i = index" [style.transitionDelay]="i*0.2+'s'">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center">
+          <i [ngClass]="[item.icone, 'fa-3x', 'mb-3', animacoes[i % animacoes.length]]"></i>
+          <h5 class="card-title">{{ item.titulo }}</h5>
+          <p class="card-text">{{ item.descricao }}</p>
+          <a class="btn btn-outline-angular btn-sm mt-2" href="#detalhes">
+            <i class="fas fa-arrow-right"></i> Leia Mais
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="tecnologias" class="container my-5 text-center reveal">
+  <h2 class="mb-4">Tecnologias Utilizadas</h2>
+
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide"><i class="fab fa-angular fa-3x" title="Angular"></i></div>
+      <div class="slide"><i class="fab fa-bootstrap fa-3x" title="Bootstrap"></i></div>
+      <div class="slide"><i class="fab fa-js-square fa-3x" title="JavaScript"></i></div>
+      <div class="slide"><i class="fab fa-html5 fa-3x" title="HTML5"></i></div>
+      <div class="slide"><i class="fab fa-css3-alt fa-3x" title="CSS3"></i></div>
+
+      <div class="slide"><i class="fab fa-angular fa-3x" title="Angular"></i></div>
+      <div class="slide"><i class="fab fa-bootstrap fa-3x" title="Bootstrap"></i></div>
+      <div class="slide"><i class="fab fa-js-square fa-3x" title="JavaScript"></i></div>
+      <div class="slide"><i class="fab fa-html5 fa-3x" title="HTML5"></i></div>
+      <div class="slide"><i class="fab fa-css3-alt fa-3x" title="CSS3"></i></div>
+    </div>
+  </div>
+</div>
+
+<div id="depoimentos" class="container my-5 text-center reveal">
+  <h2 class="mb-4">O que dizem sobre o projeto</h2>
+  <div class="row">
+    <div class="col-md-4 mb-3 reveal" *ngFor="let depo of depoimentos">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <p>"{{ depo.mensagem }}"</p>
+          <a class="btn btn-outline-angular btn-sm mt-2" href="#detalhes">
+            <i class="fas fa-arrow-right"></i> Leia Mais
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="text-center py-5 mt-5 reveal section">
+  <div class="container">
+    <h2 class="mb-3">Gostou do que viu?</h2>
+    <p class="lead">Continue explorando e descubra mais recursos incríveis.</p>
+    <a href="#login" class="btn btn-outline-angular btn-sm mt-2 ">
+      <i class="fas fa-sign-in-alt"></i> Entrar Agora
+    </a>
+  </div>
+</section>
+
+<section id="contato" class="py-5 reveal">
+  <div class="container">
+    <h2 class="text-center mb-4">Entre em Contato</h2>
+    <form class="mx-auto" style="max-width: 600px;">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" id="nome" class="form-control" placeholder="Seu nome" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" id="email" class="form-control" placeholder="Seu e-mail" />
+      </div>
+      <div class="mb-3">
+        <label for="mensagem" class="form-label">Mensagem</label>
+        <textarea id="mensagem" class="form-control" rows="4" placeholder="Digite sua mensagem"></textarea>
+      </div>
+      <button type="submit" class="btn btn-angular">
+        <i class="fas fa-paper-plane"></i> Enviar
+      </button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer text-center py-5 mt-5">
+  <div class="container">
+    <p class="mb-3">Siga-me nas redes sociais:</p>
+    <div class="social-icons mb-3">
+      <a href="#" aria-label="GitHub"><i class="fab fa-github fa-2x github-icon"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x linkedin-icon"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-2x instagram-icon"></i></a>
+    </div>
+    <hr class="footer-separator">
+    <p class="mb-0">© 2025 Geisivan Vitena - Todos os direitos reservados.</p>
+  </div>
+</footer>

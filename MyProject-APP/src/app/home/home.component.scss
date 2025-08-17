@@ -1,0 +1,497 @@
+/* ========================================================
+   RESET E ESTILOS GERAIS
+======================================================== */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.home-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ========================================================
+   SEÇÃO HOME / BANNER PRINCIPAL
+======================================================== */
+#home {
+  border-radius: 0 0 20px 20px;
+  padding: 80px 20px 50px 20px;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+.angular-icon {
+  font-size: 15rem;
+  background: linear-gradient(45deg, #dd0031, #c3002f, #a633d6, #dd0031);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: angularGradient 5s ease infinite;
+  margin-right: 10px;
+}
+
+.angular-title {
+  display: inline-block;
+  font-weight: 700;
+  background: linear-gradient(45deg, #dd0031, #c3002f, #a633d6, #dd0031);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: angularGradient 5s ease infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes angularGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ========================================================
+   BOTOES
+======================================================== */
+.btn-outline-angular.btn-lg{
+  background-color: #ffffff4d;
+  color: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  padding: 5px 5px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-outline-angular:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8),
+              0 0 40px rgba(255, 255, 255, 0.6),
+              0 0 60px rgba(255, 255, 255, 0.4);
+}
+
+/* ========================================================
+   CARDS / DESTAQUES
+======================================================== */
+.card {
+  transition: transform 0.3s ease-in-out, background-color 0.3s, box-shadow 0.3s;
+  background-color: rgba(230, 230, 230, 0.95);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 15px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #DD0031, #a633d6);
+  color: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.float { animation: floatIcon 3s ease-in-out infinite; }
+
+@keyframes pulseIcon {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.pulse { animation: pulseIcon 2s ease-in-out infinite; }
+
+@keyframes rotateIcon {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
+.rotate { animation: rotateIcon 4s ease-in-out infinite; }
+
+@keyframes swingIcon {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+.swing { animation: swingIcon 3s ease-in-out infinite; }
+
+@keyframes bounceIcon {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-15px); }
+  60% { transform: translateY(-7px); }
+}
+.bounce { animation: bounceIcon 2s ease infinite; }
+
+@keyframes tiltIcon {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(8deg); }
+  75% { transform: rotate(-8deg); }
+}
+.tilt { animation: tiltIcon 2.5s ease-in-out infinite; }
+
+.card i {
+  color: #DD0031;
+}
+
+.card:hover i {
+  color: white;
+}
+
+.card:hover .card-title,
+.card:hover .card-text {
+  color: white;
+}
+
+/* ========================================================
+   SLIDER DE TECNOLOGIAS
+======================================================== */
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(200px * 10);
+  animation: scroll 20s linear infinite;
+}
+
+.slide {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    font-size: 5rem;
+    transition: transform 0.3s ease;
+  }
+
+  i:hover {
+    transform: scale(1.2);
+  }
+}
+
+.fa-angular   { color: #dd0031; }
+.fa-bootstrap { color: #7952b3; }
+.fa-js-square { color: #f7df1e; }
+.fa-html5     { color: #e34f26; }
+.fa-css3-alt  { color: #1572b6; }
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+#tecnologias {
+  background: linear-gradient(135deg, #1a1a1a, #2c0033);
+  color: white;
+  padding: 60px 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#tecnologias h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #dd0031, #a633d6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+}
+
+#tecnologias .slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin: 0 auto;
+}
+
+#tecnologias .slide-track {
+  display: flex;
+  width: calc(200px * 10);
+  animation: scroll 20s linear infinite;
+}
+
+#tecnologias .slide {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  margin-top: 20px;
+}
+
+#tecnologias .slide i {
+  font-size: 5rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#tecnologias .slide i:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 15px #fff);
+}
+
+/* animação scroll do slider */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ========================================================
+   SESSÕES GERAIS
+======================================================== */
+.section {
+  border-radius: 20px;
+  padding: 60px 20px;
+  background: linear-gradient(45deg, #dd0031, #a633d6);
+  color: white;
+}
+
+section.text-center .btn {
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.text-center .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,255,255,0.8);
+}
+
+/* ========================================================
+   FOOTER
+======================================================== */
+.footer {
+  margin-top: auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #111;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-separator {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 1.5rem 0;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.3);
+}
+
+.github-icon   { color: #333; }
+.linkedin-icon { color: #0A66C2; }
+.instagram-icon{ color: #a633d6; }
+
+.footer p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ========================================================
+   ANIMAÇÃO REVEAL AO SCROLL
+======================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================================
+   FAQ
+======================================================== */
+#faq {
+  padding: 60px 20px;
+}
+
+#faq h2 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #DD0031;
+}
+
+.accordion-button {
+  font-weight: 600;
+  background: #f8f9fa;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(45deg, #dd0031, #a633d6);
+  color: white;
+}
+
+.accordion-body {
+  background: #fdfdfd;
+  border-left: 3px solid #dd0031;
+  padding: 15px;
+  font-size: 0.95rem;
+}
+
+/* ========================================================
+   CONTATO
+======================================================== */
+#contato {
+  margin-top: 80px;
+  border-radius: 20px;
+  padding: 60px 20px;
+  background: #f3f3f3;
+}
+
+#contato h2 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #DD0031;
+}
+
+#contato .form-control {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contato .form-control:focus {
+  border-color: #a633d6;
+  box-shadow: 0 0 10px rgba(166, 51, 214, 0.5);
+}
+
+#contato button {
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #dd0031, #a633d6);
+  color: white;
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#contato button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(221, 0, 49, 0.6);
+}
+
+/* ========================================================
+   ANIMAÇÃO AVANÇADA COM BRILHO E FLASH
+======================================================== */
+.social-icons a i {
+  position: relative;
+  color: #fff;
+  transition: transform 0.3s ease;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff;
+  animation: glowFlash 3s ease-in-out infinite;
+}
+
+.social-icons a:hover i {
+  transform: scale(1.5) rotate(10deg);
+  text-shadow:
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 40px #DD0031,
+    0 0 50px #DD0031,
+    0 0 60px #DD0031;
+}
+
+/* Animação de brilho + flashes coloridos */
+@keyframes glowFlash {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    filter: brightness(1);
+  }
+  25% {
+    text-shadow: 0 0 15px #DD0031, 0 0 25px #DD0031, 0 0 35px #fff;
+    filter: brightness(1.2);
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f7df1e;
+    filter: brightness(1.4);
+  }
+  75% {
+    text-shadow: 0 0 20px #7952b3, 0 0 30px #a633d6, 0 0 40px #fff;
+    filter: brightness(1.3);
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    filter: brightness(1);
+  }
+}
+
+#depoimentos {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1a1a1a, #2c0033);
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#depoimentos h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #ff4081;
+}
+
+#depoimentos .card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#depoimentos .card:hover {
+  transform: translateY(-10px) rotate(-1deg);
+  box-shadow: 0 25px 40px rgba(0,0,0,0.7);
+}
+
+#depoimentos .card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#depoimentos .card p::before {
+  content: "“";
+  font-size: 3rem;
+  color: #ff4081;
+  position: absolute;
+  left: -20px;
+  top: -10px;
+}
+
+#depoimentos .btn-outline-angular {
+  border-color: #ff4081;
+  color: #ff4081;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#depoimentos .btn-outline-angular:hover {
+  background: #ff4081;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff4081;
+}
+

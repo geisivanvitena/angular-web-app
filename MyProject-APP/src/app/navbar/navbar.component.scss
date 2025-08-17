@@ -1,0 +1,45 @@
+#angular-navbar {
+  background: linear-gradient(45deg, #f45ddd, #c3002f, #d0008d, #dd0031); /* gradiente vermelho Angular */
+}
+
+#angular-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+#angular-navbar .nav-link:hover {
+
+  color: white;
+}
+
+.btn-outline-angular{
+  background-color: #ffffff4d;
+  color: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  padding: 5px 5px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-outline-angular:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8),
+            0 0 40px rgba(255, 255, 255, 0.6),
+            0 0 60px rgba(255, 255, 255, 0.4);
+}
+
+#angular-navbar .angular-icon {
+  margin-right: 8px;
+  font-size: 3rem;
+  vertical-align: middle;
+  background: linear-gradient(45deg, #DD0031, #C3002F, #A633D6, #DD0031);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
